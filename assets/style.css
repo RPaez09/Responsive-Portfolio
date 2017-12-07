@@ -20,7 +20,7 @@ nav h1 {
 nav ul {
     display: inline-block;
     position: absolute;
-    right: 0;
+    right: 30px;
     height: 100%;
     padding-top: 35px;
 }
@@ -94,9 +94,17 @@ nav ul li:last-child a{
 }
 
 /* Portfolio Styling */
+
+.content.portfolio .box.left .portfolio-wrapper {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .content.portfolio .box.left a.portfolio-item {
     display: inline-block;
-    margin: 0 0 20px 0;
+    margin: 0 10px 20px 10px;
     position: relative;
 }
 
@@ -113,10 +121,6 @@ nav ul li:last-child a{
     color: #ffffff;
     background-color: #4aaaa5;
     background-color: rgba(74, 170, 165, .85); /* It'll fall back to above if no browser support*/
-}
-
-.content.portfolio .box.left a.portfolio-item:nth-child(even) {
-    padding: 0 34px 20px 0;
 }
 
 /* Contact Styling */
@@ -137,7 +141,7 @@ nav ul li:last-child a{
 
 .content.contact textarea {
     height: 200px;
-    max-width: 582px;
+    max-width: 100%;
 }
 
 .content.contact .button {
@@ -190,3 +194,82 @@ footer h6 {
     color: #cccccc;
     margin-top: 40px;
 }
+
+@media screen and (max-width: 980px) {
+
+    .container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    nav ul li a {
+        padding: 0 10px;
+    }
+
+    .content .box.left {
+        margin-right: 0;
+        width: initial;
+    }
+
+    .content .box.right {
+        width: 100%;
+    }
+
+    .content .box.right .icon-box {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .content.contact .box.left {
+        width: 100%;
+    }
+
+ }
+
+ @media screen and (max-width: 768px) { 
+    nav ul {
+        right: 30px;
+    }
+
+ }
+
+ @media screen and (max-width: 640px) { /* unconventional breakpoints */
+
+    .container {
+        padding: 0;
+    }
+
+    nav {
+        height: initial;
+    }
+
+    nav h1{
+        width: 100%;
+        line-height: 90px;
+        display: block;
+    }
+
+    nav ul {
+        position: initial;
+        width: 100%;
+        display: block;
+        padding: 20px 0 35px 0;
+    }
+
+    nav ul li {
+        float: left;
+        width: 33.33%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        border-right: 0;
+    }
+
+    .content.about .box.left img {
+        width: 100%;
+    }
+
+ }
